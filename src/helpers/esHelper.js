@@ -1,6 +1,6 @@
 import callWebApi from './webApiHelper';
 
-const protocol = process.env.REACT_APP_USE_SSL !== '' ? 'https' : 'http';
+export const protocol = process.env.REACT_APP_USE_SSL !== '' ? 'https' : 'http';
 
 export const transformParams = params => {
   // console.log(params);

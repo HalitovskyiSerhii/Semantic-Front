@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { getTop } from './action';
-import { transformParams } from '../../helpers/esHelper';
+import { protocol, transformParams } from '../../helpers/esHelper';
 
 const Texts = ({ words, getTop: top }) => {
   if (words.length === 0) top(5);
@@ -17,7 +17,7 @@ const Texts = ({ words, getTop: top }) => {
           <ReactiveBase
             componentId="base"
             app="es"
-            url="https://semantic-s.ml/"
+            url={'https://semantic-s.ml/'.replace('https', protocol)}
             transformRequest={transformParams}
           >
             <ReactiveList
