@@ -1,0 +1,1 @@
+export const SET_WORDS = 'TOP_ACTION:SET_WORDS';
